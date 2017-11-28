@@ -1,0 +1,17 @@
+E:\projects\M101JS\units\week1\hw1-2>mongorestore dump
+2017-11-28T17:10:58.902+0300    preparing collections to restore from
+2017-11-28T17:10:58.925+0300    reading metadata for m101.hw1_2 from dump\m101\hw1_2.metadata.json
+2017-11-28T17:10:59.020+0300    restoring m101.hw1_2 from dump\m101\hw1_2.bson
+2017-11-28T17:10:59.024+0300    no indexes to restore
+2017-11-28T17:10:59.024+0300    finished restoring m101.hw1_2 (1 document)
+2017-11-28T17:10:59.024+0300    done
+
+E:\projects\M101JS\units\week1\hw1-2>
+E:\projects\M101JS\units\week1\hw1-2>npm install
+npm WARN deprecated mongodb@2.1.21: Please upgrade to 2.2.19 or higher
+npm WARN deprecated crypto@0.0.3: This package is no longer supported. It's now a built-in Node module. If you've depended on crypto, you should switch to the one that's built-in.
+npm notice created a lockfile as package-lock.json. You should commit this file.
+added 13 packages in 3.078s
+
+E:\projects\M101JS\units\week1\hw1-2>node app.js
+Answer: I like kittens
