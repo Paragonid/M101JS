@@ -1,0 +1,69 @@
+> db.movieDetails.findOne()
+{
+        "_id" : ObjectId("569190ca24de1e0ce2dfcd4f"),
+        "title" : "Once Upon a Time in the West",
+        "year" : 1968,
+        "rated" : "PG-13",
+        "released" : ISODate("1968-12-21T05:00:00Z"),
+        "runtime" : 175,
+        "countries" : [
+                "Italy",
+                "USA",
+                "Spain"
+        ],
+        "genres" : [
+                "Western"
+        ],
+        "director" : "Sergio Leone",
+        "writers" : [
+                "Sergio Donati",
+                "Sergio Leone",
+                "Dario Argento",
+                "Bernardo Bertolucci",
+                "Sergio Leone"
+        ],
+        "actors" : [
+                "Claudia Cardinale",
+                "Henry Fonda",
+                "Jason Robards",
+                "Charles Bronson"
+        ],
+        "plot" : "Epic story of a mysterious stranger with a harmonica who joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.",
+        "poster" : "http://ia.media-imdb.com/images/M/MV5BMTEyODQzNDkzNjVeQTJeQWpwZ15BbWU4MDgyODk1NDEx._V1_SX300.jpg",
+        "imdb" : {
+                "id" : "tt0064116",
+                "rating" : 8.6,
+                "votes" : 201283
+        },
+        "tomato" : {
+                "meter" : 98,
+                "image" : "certified",
+                "rating" : 9,
+                "reviews" : 54,
+                "fresh" : 53,
+                "consensus" : "A landmark Sergio Leone spaghetti western masterpiece featuring a classic Morricone score.",
+                "userMeter" : 95,
+                "userRating" : 4.3,
+                "userReviews" : 64006
+        },
+        "metacritic" : 80,
+        "awards" : {
+                "wins" : 4,
+                "nominations" : 5,
+                "text" : "4 wins & 5 nominations."
+        },
+        "type" : "movie"
+}
+
+> db.movieDetails.find({year: "2013", rated: "PG-13", "awards.wins": "0"})
+
+> db.movieDetails.find({year: 2013, rated: "PG-13", "awards.wins": 0})
+{ "_id" : ObjectId("5692a3e124de1e0ce2dfda22"), "title" : "A Decade of Decadence, Pt. 2: Legacy of Dreams", "year" : 2013, "rated" : "PG-13", "released" : ISODate("2013-09-13T04:00:00Z"), "runtime" : 65, "countries" : [ "USA" ], "genres" : [ "Documentary" ], "d
+irector" : "Drew Glick", "writers" : [ "Drew Glick" ], "actors" : [ "Gordon Auld", "Howie Boulware Jr.", "Tod Boulware", "Chen Drachman" ], "plot" : "A behind the scenes look at the making of A Tiger in the Dark: The Decadence Saga.", "poster" : null, "imdb" :
+{ "id" : "tt2199902", "rating" : 8, "votes" : 50 }, "awards" : { "wins" : 0, "nominations" : 0, "text" : "" }, "type" : "movie" }
+
+> db.movieDetails.find({year: 2013, rated: "PG-13", "awards.wins": 0}).count()
+1
+
+Answer is doc.title:
+A Decade of Decadence, Pt. 2: Legacy of Dreams
